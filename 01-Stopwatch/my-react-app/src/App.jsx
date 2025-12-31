@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./assets/style.css";
 function App() {
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(false);
@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <h1>Stopwatch</h1>
-      <div>
+      <div className="container">
         <span>{"0" + (Math.floor(time / 60000) % 60)}:</span>
         <span>{"0" + (Math.floor(time / 1000) % 60)}:</span>
         <span>{(time / 10) % 100}</span>
