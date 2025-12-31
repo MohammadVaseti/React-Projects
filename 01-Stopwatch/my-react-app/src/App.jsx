@@ -11,9 +11,9 @@ function App() {
         <span>{"0" + (Math.floor(time / 1000) % 60)}</span>
         <span>{"0" + ((time / 10) % 100)}</span>
       </div>
-      <button onClick={setRunning(true)}>Start</button>
-      <button onClick={setRunning(false)}>Stop</button>
-      <button onClick={setTime(0)}>Reset</button>
+      <button onClick={() => setRunning(true)}>Start</button>
+      <button onClick={() => setRunning(false)}>Stop</button>
+      <button onClick={() => setTime(0)}>Reset</button>
     </>
   );
 }
