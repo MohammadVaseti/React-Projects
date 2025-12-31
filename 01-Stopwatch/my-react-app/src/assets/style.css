@@ -3,15 +3,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: orangered;
 }
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+h1 {
+  color: white;
+}
 span {
   font-size: 2rem;
 }
 button {
-  margin: 5%;
+  margin: 2%;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
 }
