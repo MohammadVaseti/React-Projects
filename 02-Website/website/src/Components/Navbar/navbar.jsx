@@ -1,7 +1,9 @@
+import "./navbar.css";
+
 function Navbar() {
   return (
     <div>
-      <h1>hello world</h1>
+      <h1 className="header">Header</h1>
     </div>
   );
 }
