@@ -14,8 +14,6 @@ function Home() {
           <Article />
           <Article />
           <Article />
-          <Article />
-          <Article />
         </div>
       </div>
     </>

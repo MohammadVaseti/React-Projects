@@ -1,7 +1,6 @@
 .container {
   margin: 10px 10%;
-  background-color: rgb(162, 157, 157);
-  height: 80vh;
+  background-color: rgb(2, 177, 236);
   border-radius: 20px;
   padding: 2%;
 }
@@ -9,4 +8,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+h2 {
+  text-align: center;
 }

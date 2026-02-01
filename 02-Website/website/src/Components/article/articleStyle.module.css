@@ -1,6 +1,14 @@
 .article {
-  width: 23%;
-  height: 200px;
-  background-color: red;
-  margin: 1%;
+  width: 24%;
+  height: 300px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.picture {
+  border-radius: 20px;
+  height: 70%;
+  width: 100%;
+}
+h3 {
+  text-align: center;
 }
