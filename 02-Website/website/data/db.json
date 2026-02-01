@@ -1,0 +1,19 @@
+{
+  "articles": {
+    "status": true,
+    "data": [
+      {
+        "id": 1,
+        "imgUrl": "",
+        "title": "title 1",
+        "time": 5
+      },
+      {
+        "id": 2,
+        "imgUrl": "",
+        "title": "title 2",
+        "time": 4
+      }
+    ]
+  }
+}
