@@ -7,7 +7,12 @@ function Home() {
       <Navbar title="My Blog" />
       <div className={styles.container}>
         <h2>New Blogs</h2>
-        <Article />
+        <div className={styles.articlesContainer}>
+          <Article />
+          <Article />
+          <Article />
+          <Article />
+        </div>
       </div>
     </>
   );
