@@ -2,8 +2,7 @@ import Navbar from "./Components/Navbar/navbar";
 function App() {
   return (
     <div>
-      <Navbar title="header" />
-      <Navbar title="footer" />
+      <Navbar title="My Blog" />
     </div>
   );
 }
