@@ -6,6 +6,7 @@ function Article() {
       <div className={styled.article}>
         <img src={pic} alt="react" className={styled.picture}></img>
         <h3>React Lessons</h3>
+        <span>5m</span>
       </div>
     </>
   );
