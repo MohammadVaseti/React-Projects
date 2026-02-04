@@ -9,6 +9,12 @@ function Home() {
       title: "first",
       time: 5,
     },
+    {
+      id: 2,
+      imgUrl: "",
+      title: "second",
+      time: 4,
+    },
   ];
 
   return (
