@@ -24,19 +24,19 @@
         "id": 4,
         "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQWEec5opVIo9_CcX0HktzmrZTi1mua5P6tQ&s",
         "title": "Typescript",
-        "time": 5
+        "time": 7
       },
       {
         "id": 5,
         "imgUrl": "https://repository-images.githubusercontent.com/212838667/84aa2600-e764-11e9-8a71-0d8d2e5a0f52",
         "title": "Flexbox",
-        "time": 5
+        "time": 2
       },
       {
         "id": 6,
         "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ8Y2PL2yUUsk903OlyKwmsykDmweBT0AF_Q&s",
         "title": "Bootstrap",
-        "time": 5
+        "time": 4
       }
     ]
   }
