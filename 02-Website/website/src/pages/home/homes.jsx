@@ -3,6 +3,7 @@ import Navbar from "../../Components/Navbar/navbar";
 import styles from "../home/homeStyle.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Footer from "../../Components/Footer/footer";
 function Home() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
@@ -27,6 +28,7 @@ function Home() {
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 }
