@@ -1,4 +1,7 @@
 import Navbar from "../../Components/Navbar/navbar";
+import Footer from "../../Components/Footer/footer";
+import iran from "../../assets/images/iran.png";
+import styled from "../aboutUs/about.module.css";
 const About = () => {
   return (
     <div>
@@ -18,6 +21,11 @@ const About = () => {
         quibusdam optio debitis quo explicabo? Eos nulla praesentium ducimus
         molestias.
       </p>
+      <h3>Where We Work ?</h3>
+      <div className={styled.container}>
+        <img src={iran} alt="iran" style={{ textAlign: "center" }}></img>
+      </div>
+      <Footer></Footer>
     </div>
   );
 };
