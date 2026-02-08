@@ -2,6 +2,7 @@ import Article from "../../Components/article/Article";
 import Navbar from "../../Components/Navbar/navbar";
 import styles from "../home/homeStyle.module.css";
 import { useState, useEffect } from "react";
+import axios from "axios";
 function Home() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
