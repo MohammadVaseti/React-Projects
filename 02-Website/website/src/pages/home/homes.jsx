@@ -4,6 +4,7 @@ import styles from "../home/homeStyle.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Footer from "../../Components/Footer/footer";
+import { Link } from "react-router-dom";
 function Home() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
@@ -24,7 +25,9 @@ function Home() {
         <h2>New Blogs</h2>
         <div className={styles.articlesContainer}>
           {articles.map((article) => (
-            <Article data={article} key={article.id} />
+            <Link to="/article">
+              <Article data={article} key={article.id} />
+            </Link>
           ))}
         </div>
       </div>
