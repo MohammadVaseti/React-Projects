@@ -25,7 +25,7 @@ function Home() {
         <h2>New Blogs</h2>
         <div className={styles.articlesContainer}>
           {articles.map((article) => (
-            <Link to="/article">
+            <Link to={`article/${article.id}`}>
               <Article data={article} key={article.id} />
             </Link>
           ))}
