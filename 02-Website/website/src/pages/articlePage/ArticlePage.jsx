@@ -7,33 +7,41 @@ import axios from "axios";
 
 const ArticlePage = () => {
   const [article, setArticle] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
   const param = useParams();
 
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get(`http://localhost:8000/articles/${param.id}`)
       .then((res) => {
         setArticle(res.data);
         console.log(res);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
+        setIsLoading(false);
       });
   }, []);
 
   return (
     <>
       <Navbar title="My Blog"></Navbar>
-      <div className={styled.container}>
-        <h1>{article.title}</h1>
-        <img src={article.imgUrl} alt="" />
-        <div style={{ marginBottom: "40px" }}>
-          <span>Date : {article.date} /</span>
-          <span>Written By : {article.author} /</span>
-          <span>Reading Time : {article.time} min </span>
+      {isLoading ? (
+        <p>Wait a Moment Please</p>
+      ) : (
+        <div className={styled.container}>
+          <h1>{article.title}</h1>
+          <img src={article.imgUrl} alt="" />
+          <div style={{ marginBottom: "40px" }}>
+            <span>Date : {article.date} /</span>
+            <span>Written By : {article.author} /</span>
+            <span>Reading Time : {article.time} min </span>
+          </div>
+          <p>{article.content}</p>
         </div>
-        <p>{article.content}</p>
-      </div>
+      )}
       <Footer></Footer>
     </>
   );
