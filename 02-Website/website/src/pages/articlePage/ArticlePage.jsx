@@ -4,6 +4,7 @@ import Navbar from "../../Components/Navbar/navbar";
 import styled from "../articlePage/articlePage.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Loading from "../../Components/loading/Loading";
 
 const ArticlePage = () => {
   const [article, setArticle] = useState({});
@@ -29,7 +30,7 @@ const ArticlePage = () => {
     <>
       <Navbar title="My Blog"></Navbar>
       {isLoading ? (
-        <p>Wait a Moment Please</p>
+        <Loading />
       ) : (
         <div className={styled.container}>
           <h1>{article.title}</h1>

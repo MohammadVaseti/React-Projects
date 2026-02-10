@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Footer from "../../Components/Footer/footer";
 import { Link } from "react-router-dom";
+import Loading from "../../Components/loading/Loading";
 function Home() {
   const [articles, setArticles] = useState([]);
 
@@ -28,7 +29,7 @@ function Home() {
     <>
       <Navbar title="My Blog" />
       {isLoading ? (
-        <p>Wait a Moment Please</p>
+        <Loading />
       ) : (
         <div className={styles.container}>
           <h2>New Blogs</h2>
