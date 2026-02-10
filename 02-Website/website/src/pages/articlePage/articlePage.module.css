@@ -7,3 +7,8 @@
 p {
   text-align: center;
 }
+img {
+  margin: 20px 0;
+  height: 500px;
+  width: 550px;
+}

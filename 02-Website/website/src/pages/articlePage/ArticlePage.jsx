@@ -26,26 +26,13 @@ const ArticlePage = () => {
       <Navbar title="My Blog"></Navbar>
       <div className={styled.container}>
         <h1>{article.title}</h1>
-        <div>
-          <span>date</span>
-          <span>author</span>
-          <span>time</span>
+        <img src={article.imgUrl} alt="" />
+        <div style={{ marginBottom: "40px" }}>
+          <span>Date : {article.date} /</span>
+          <span>Written By : {article.author} /</span>
+          <span>Reading Time : {article.time} min </span>
         </div>
-        <img src="../../src/assets/images/iran.png" alt="" />
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. A est ipsam
-          maxime atque iusto fugit, consectetur cupiditate saepe quasi expedita,
-          doloremque vel neque rem veniam enim laborum aperiam ad quo non
-          voluptatum excepturi! Rem, reprehenderit quis odit a, recusandae
-          tempore illo exercitationem quidem, quos quas nisi eos fugiat! Minus
-          natus dignissimos asperiores consectetur! Quidem porro voluptatum
-          molestias, officiis ea ut rem quia obcaecati earum temporibus
-          inventore quis minima ullam, fuga tempore necessitatibus cumque animi
-          nihil libero, expedita fugit doloremque ipsa dignissimos quasi. Modi
-          facilis, at excepturi harum repellendus libero expedita itaque odio
-          inventore labore, qui praesentium corrupti! Autem, maxime
-          consequuntur.
-        </p>
+        <p>{article.content}</p>
       </div>
       <Footer></Footer>
     </>
