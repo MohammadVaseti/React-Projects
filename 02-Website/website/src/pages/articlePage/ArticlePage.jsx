@@ -2,16 +2,20 @@ import { useParams } from "react-router-dom";
 import Footer from "../../Components/Footer/footer";
 import Navbar from "../../Components/Navbar/navbar";
 import styled from "../articlePage/articlePage.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const ArticlePage = () => {
+  const [article, setArticle] = useState({});
   const param = useParams();
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/articles")
-      .then((res) => {})
+      .get(`http://localhost:8000/articles/${param.id}`)
+      .then((res) => {
+        setArticle(res.data);
+        console.log(res);
+      })
       .catch((err) => {
         console.log(err);
       });
@@ -21,7 +25,7 @@ const ArticlePage = () => {
     <>
       <Navbar title="My Blog"></Navbar>
       <div className={styled.container}>
-        <h1>variables in js</h1>
+        <h1>{article.title}</h1>
         <div>
           <span>date</span>
           <span>author</span>
