@@ -7,6 +7,9 @@ import Footer from "../../Components/Footer/footer";
 import { Link } from "react-router-dom";
 function Home() {
   const [articles, setArticles] = useState([]);
+
+  const [isLoading, setIsLoading] = useState();
+
   useEffect(() => {
     axios
       .get("http://localhost:8000/articles")
