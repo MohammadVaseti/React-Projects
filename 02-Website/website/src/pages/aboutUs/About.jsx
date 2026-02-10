@@ -23,7 +23,7 @@ const About = () => {
       </p>
       <h3>Where We Work ?</h3>
       <div className={styled.container}>
-        <img src={iran} alt="iran" style={{ textAlign: "center" }}></img>
+        <img src={iran} alt="iran"></img>
       </div>
       <Footer></Footer>
     </div>
