@@ -2,9 +2,20 @@ import { useParams } from "react-router-dom";
 import Footer from "../../Components/Footer/footer";
 import Navbar from "../../Components/Navbar/navbar";
 import styled from "../articlePage/articlePage.module.css";
+import { useEffect } from "react";
+import axios from "axios";
 
 const ArticlePage = () => {
   const param = useParams();
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/articles")
+      .then((res) => {})
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <>
