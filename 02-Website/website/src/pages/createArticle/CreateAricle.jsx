@@ -23,7 +23,7 @@ const CreateArticle = () => {
     <>
       <Navbar />
       <h1>Create Article</h1>
-      <div>
+      {/* <div>
         <label>title : </label>
         <input name="title" onChange={handleChange} type="text"></input>
       </div>
@@ -38,7 +38,7 @@ const CreateArticle = () => {
       <div>
         <label>Reading Time : </label>
         <input name="time" onChange={handleChange} type="text"></input>
-      </div>
+      </div> */}
       <Footer />
     </>
   );
