@@ -9,21 +9,11 @@ const CreateArticle = () => {
   });
 
   const handleChange = (e) => {
-    switch (e.target.name) {
-      case "title":
-        setArticle({
-          title: e.target.value,
-        });
+    setArticle((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
 
-        break;
-
-      case "date":
-        setArticle({
-          date: e.target.value,
-        });
-
-        break;
-    }
     console.log(article);
   };
 
