@@ -6,6 +6,8 @@ const CreateArticle = () => {
   const [article, setArticle] = useState({
     title: "",
     date: "",
+    author: "",
+    time: "",
   });
 
   const handleChange = (e) => {
