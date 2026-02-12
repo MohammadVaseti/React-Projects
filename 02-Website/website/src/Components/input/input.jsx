@@ -1,11 +1,15 @@
 import styled from "../input/inputStyle.module.css";
 
-const Input = () => {
+const Input = (props) => {
   return (
     <>
       <div>
-        <label>title : </label>
-        <input name="title" onChange={handleChange} type="text"></input>
+        <label>{props.label} : </label>
+        <input
+          name={props.name}
+          onChange={props.handleChange}
+          type="text"
+        ></input>
       </div>
     </>
   );

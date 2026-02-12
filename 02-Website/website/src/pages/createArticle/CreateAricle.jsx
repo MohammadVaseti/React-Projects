@@ -2,6 +2,7 @@ import { useState } from "react";
 import Footer from "../../Components/Footer/footer";
 import Navbar from "../../Components/Navbar/navbar";
 import styled from "../createArticle/createArticle.module.css";
+import Input from "../../Components/input/input";
 const CreateArticle = () => {
   const [article, setArticle] = useState({
     title: "",
@@ -23,6 +24,10 @@ const CreateArticle = () => {
     <>
       <Navbar />
       <h1>Create Article</h1>
+      <Input label="Title" name="title" onChange={handleChange} />
+      <Input label="Date" name="date" onChange={handleChange} />
+      <Input label="Author" name="author" onChange={handleChange} />
+      <Input label="Reading Time" name="time" onChange={handleChange} />
       {/* <div>
         <label>title : </label>
         <input name="title" onChange={handleChange} type="text"></input>
