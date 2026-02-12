@@ -10,7 +10,7 @@ function Navbar(props) {
           <Link to="/">Blog Lists</Link>
         </li>
         <li>
-          <Link>New Blog</Link>
+          <Link to="/article/create-article">New Blog</Link>
         </li>
         <li>
           <Link to="/about">About Us</Link>
