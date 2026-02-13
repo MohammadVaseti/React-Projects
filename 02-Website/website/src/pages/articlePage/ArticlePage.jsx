@@ -34,7 +34,7 @@ const ArticlePage = () => {
       ) : (
         <div className={styled.container}>
           <h1>{article.title}</h1>
-          <img src={article.imgUrl} alt="" />
+          <img src={article.image} alt="" />
           <div style={{ marginBottom: "40px" }}>
             <span>Date : {article.date} /</span>
             <span>Written By : {article.author} /</span>

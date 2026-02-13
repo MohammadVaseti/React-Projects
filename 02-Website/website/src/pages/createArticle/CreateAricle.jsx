@@ -4,12 +4,16 @@ import Navbar from "../../Components/Navbar/navbar";
 import styled from "../createArticle/createArticle.module.css";
 import Input from "../../Components/input/input";
 import TextArea from "../../Components/textarea/TextArea";
+import { useEffect } from "react";
+import axios from "axios";
 const CreateArticle = () => {
   const [article, setArticle] = useState({
     title: "",
     date: "",
     author: "",
     time: "",
+    image: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -17,8 +21,23 @@ const CreateArticle = () => {
       ...prevState,
       [e.target.name]: e.target.value,
     }));
+  };
+  const handlechangeContent = (e) => {
+    setArticle((prevState) => ({
+      ...prevState,
+      message: e.target.value,
+    }));
+  };
 
-    console.log(article);
+  const handleClick = () => {
+    axios.post("http://localhost:8000/articles", {
+      image: article.image,
+      title: article.title,
+      time: article.time,
+      date: article.date,
+      author: article.author,
+      message: article.message,
+    });
   };
 
   return (
@@ -29,7 +48,9 @@ const CreateArticle = () => {
       <Input label="Date" name="date" onChange={handleChange} />
       <Input label="Author" name="author" onChange={handleChange} />
       <Input label="Reading Time" name="time" onChange={handleChange} />
-      <TextArea />
+      <Input label="img-url" name="image" onChange={handleChange} />
+      <TextArea label="content" onChange={handlechangeContent} />
+      <button onClick={handleClick}>Create Article</button>
       <Footer />
     </>
   );

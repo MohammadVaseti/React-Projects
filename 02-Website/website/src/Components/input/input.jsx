@@ -5,11 +5,7 @@ const Input = (props) => {
     <>
       <div>
         <label>{props.label} : </label>
-        <input
-          name={props.name}
-          onChange={props.handleChange}
-          type="text"
-        ></input>
+        <input name={props.name} onChange={props.onChange} type="text"></input>
       </div>
     </>
   );

@@ -5,11 +5,7 @@ function Article(props) {
   return (
     <>
       <div className={styled.article}>
-        <img
-          src={props.data.imgUrl}
-          alt="react"
-          className={styled.picture}
-        ></img>
+        <img src={props.data.image} className={styled.picture}></img>
         <h3>{props.data.title}</h3>
         <span>{props.data.time}m</span>
       </div>

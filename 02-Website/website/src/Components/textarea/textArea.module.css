@@ -9,5 +9,6 @@
 .container textarea {
   width: 100%;
   min-height: 200px;
+  font-size: 20px;
   border: 1px solid grey;
 }

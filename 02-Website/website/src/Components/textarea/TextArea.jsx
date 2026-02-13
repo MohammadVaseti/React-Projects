@@ -1,11 +1,11 @@
 import styled from "../textarea/textArea.module.css";
 
-const TextArea = () => {
+const TextArea = (props) => {
   return (
     <>
       <div className={styled.container}>
-        <label>Enter Your Content : </label>
-        <textarea></textarea>
+        <label>{props.label} : </label>
+        <textarea onChange={props.onChange}></textarea>
       </div>
     </>
   );
