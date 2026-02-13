@@ -3,6 +3,7 @@ import Footer from "../../Components/Footer/footer";
 import Navbar from "../../Components/Navbar/navbar";
 import styled from "../createArticle/createArticle.module.css";
 import Input from "../../Components/input/input";
+import TextArea from "../../Components/textarea/TextArea";
 const CreateArticle = () => {
   const [article, setArticle] = useState({
     title: "",
@@ -28,6 +29,7 @@ const CreateArticle = () => {
       <Input label="Date" name="date" onChange={handleChange} />
       <Input label="Author" name="author" onChange={handleChange} />
       <Input label="Reading Time" name="time" onChange={handleChange} />
+      <TextArea />
       <Footer />
     </>
   );
