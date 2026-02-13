@@ -49,7 +49,7 @@ const CreateArticle = () => {
       <Input label="Author" name="author" onChange={handleChange} />
       <Input label="Reading Time" name="time" onChange={handleChange} />
       <Input label="img-url" name="image" onChange={handleChange} />
-      <TextArea label="content" onChange={handlechangeContent} />
+      <TextArea label="message" onChange={handlechangeContent} />
       <button onClick={handleClick}>Create Article</button>
       <Footer />
     </>

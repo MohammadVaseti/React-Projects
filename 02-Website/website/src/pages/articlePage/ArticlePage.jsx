@@ -40,7 +40,7 @@ const ArticlePage = () => {
             <span>Written By : {article.author} /</span>
             <span>Reading Time : {article.time} min </span>
           </div>
-          <p>{article.content}</p>
+          <p>{article.message}</p>
         </div>
       )}
       <Footer></Footer>

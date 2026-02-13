@@ -35,51 +35,6 @@
       "date": "21/08/2022",
       "author": "Mohammad",
       "content": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
-    },
-    {
-      "id": 5,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ8Y2PL2yUUsk903OlyKwmsykDmweBT0AF_Q&s",
-      "title": "Bootstrap",
-      "time": 4,
-      "date": "21/08/2022",
-      "author": "Maryam",
-      "content": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
-    },
-    {
-      "id": 8,
-      "image": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
-      "title": "flex",
-      "time": "5",
-      "date": "12/2/2023",
-      "author": "reza",
-      "content": "assasasasasasadsdsdsdfdfdfdggfgfggf"
-    },
-    {
-      "imageURL": "import { useState } from \"react\"; import Footer from \"../../Components/Footer/footer\"; import Navbar from \"../../Components/Navbar/navbar\"; import styled from \"../createArticle/createArticle.module.css\"; import Input from \"../../Components/input/input\"; import TextArea from \"../../Components/textarea/TextArea\"; import { useEffect } from \"react\"; import axios from \"axios\"; const CreateArticle = () => {   const [article, setArticle] = useState({     title: \"\",     date: \"\",     author: \"\",     time: \"\",     imageURL: \"\",     message: \"\",   });    const handleChange = (e) => {     setArticle((prevState) => ({       ...prevState,       [e.target.name]: e.target.value,     }));   };   const handlechangeContent = (e) => {     setArticle((prevState) => ({       ...prevState,       message: e.target.value,     }));   };    const handleClick = () => {     axios.post(\"http://localhost:8000/articles\", {       id: 8,       imageURL: article.imageURL,       title: article.title,       time: article.time,       date: article.date,       author: article.author,       content: article.message,     });   };    return (     <>       <Navbar />       <h1>Create Article</h1>       <Input label=\"Title\" name=\"title\" onChange={handleChange} />       <Input label=\"Date\" name=\"date\" onChange={handleChange} />       <Input label=\"Author\" name=\"author\" onChange={handleChange} />       <Input label=\"Reading Time\" name=\"time\" onChange={handleChange} />       <Input label=\"img-url\" name=\"imageURL\" onChange={handleChange} />       <TextArea label=\"content\" onChange={handlechangeContent} />       <button onClick={handleClick}>Create Article</button>       <Footer />     </>   ); };  export default CreateArticle;",
-      "title": "sass",
-      "time": "3",
-      "date": "12/2/2023",
-      "author": "hani",
-      "message": "asasasa",
-      "id": 9
-    },
-    {
-      "imageURL": "https://sass-lang.com/assets/img/logos/logo.svg",
-      "title": "saass",
-      "time": "3",
-      "date": "12/2/2023",
-      "author": "reza",
-      "message": "asasas",
-      "id": 10
-    },
-    {
-      "image": "https://avatars.githubusercontent.com/u/18133?s=200&v=4",
-      "title": "git",
-      "time": "3",
-      "date": "12/2/2023",
-      "author": "vali",
-      "message": "sadsa",
-      "id": 11
     }
   ]
 }
