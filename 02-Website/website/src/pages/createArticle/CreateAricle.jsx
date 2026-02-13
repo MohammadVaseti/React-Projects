@@ -28,22 +28,6 @@ const CreateArticle = () => {
       <Input label="Date" name="date" onChange={handleChange} />
       <Input label="Author" name="author" onChange={handleChange} />
       <Input label="Reading Time" name="time" onChange={handleChange} />
-      {/* <div>
-        <label>title : </label>
-        <input name="title" onChange={handleChange} type="text"></input>
-      </div>
-      <div>
-        <label>Date : </label>
-        <input name="date" onChange={handleChange} type="text"></input>
-      </div>
-      <div>
-        <label>Author : </label>
-        <input name="author" onChange={handleChange} type="text"></input>
-      </div>
-      <div>
-        <label>Reading Time : </label>
-        <input name="time" onChange={handleChange} type="text"></input>
-      </div> */}
       <Footer />
     </>
   );
