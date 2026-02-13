@@ -3,7 +3,7 @@ import styled from "../textarea/textArea.module.css";
 const TextArea = () => {
   return (
     <>
-      <div>
+      <div className={styled.container}>
         <label>Enter Your Content : </label>
         <textarea></textarea>
       </div>
