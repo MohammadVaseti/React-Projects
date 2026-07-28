@@ -1,7 +1,11 @@
+import User from "./components/User";
+
 const App = () => {
   return (
     <>
-      <div>hello</div>
+      <div>
+        <User name="saadoun" age={17}></User>
+      </div>
     </>
   );
 };
