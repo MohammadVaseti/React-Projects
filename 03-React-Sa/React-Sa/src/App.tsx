@@ -3,6 +3,10 @@ import "./styles/style.css";
 import styles from "./styles/style.module.css";
 const App = () => {
   const names = ["saadoun", "maajoun"];
+  const users = [
+    { name: "gol", age: 20 },
+    { name: "shab", age: 32 },
+  ];
 
   return (
     <>
@@ -12,7 +16,15 @@ const App = () => {
         <h2 className={styles.back}>hi</h2>
         <h3 style={{ color: "yellow", backgroundColor: "green" }}>good</h3>
         {names.map((v, i) => {
-          return <h1>{v}</h1>;
+          return <h1 key={i}>{v}</h1>;
+        })}
+
+        {users.map((value, i) => {
+          return (
+            <h1 key={i}>
+              {value.name} {value.age}
+            </h1>
+          );
         })}
       </div>
     </>
