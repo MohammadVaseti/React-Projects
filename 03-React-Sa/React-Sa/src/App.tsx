@@ -1,6 +1,5 @@
 import User from "./components/User";
-import style from "./styles";
-
+import "./styles/style.css";
 const App = () => {
   return (
     <>
