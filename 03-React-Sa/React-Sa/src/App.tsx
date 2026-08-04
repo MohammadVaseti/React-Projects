@@ -4,6 +4,7 @@ import "./styles/style.css";
 import styles from "./styles/style.module.css";
 const App = () => {
   const [age, setAge] = useState(0);
+  const [input, setInput] = useState("");
   const names = ["saadoun", "maajoun"];
   const users = [
     { name: "gol", age: 20 },
@@ -20,6 +21,10 @@ const App = () => {
 
   const resetHandler = () => {
     setAge(0);
+  };
+
+  const inputHandler = (event) => {
+    setInput(event.target.value);
   };
 
   return (
@@ -50,6 +55,9 @@ const App = () => {
         <button type="button" onClick={resetHandler}>
           reset
         </button>
+
+        <input type="text" onChange={inputHandler} />
+        <h2>{input}</h2>
       </div>
     </>
   );
