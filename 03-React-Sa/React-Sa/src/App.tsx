@@ -3,6 +3,7 @@ import User from "./components/User";
 import "./styles/style.css";
 import styles from "./styles/style.module.css";
 const App = () => {
+  const [toggle, setToggle] = useState(true);
   const [age, setAge] = useState(0);
   const [input, setInput] = useState("");
   const names = ["saadoun", "maajoun"];
@@ -27,7 +28,9 @@ const App = () => {
     setInput(event.target.value);
   };
 
-  const toggle = () => {};
+  const toggleHandler = () => {
+    setToggle(!toggle);
+  };
 
   return (
     <>
@@ -57,12 +60,12 @@ const App = () => {
         <button type="button" onClick={resetHandler}>
           reset
         </button>
-        <button type="button" onClick={toggle}>
+        <button type="button" onClick={toggleHandler}>
           Show/Hide
         </button>
 
         <input type="text" onChange={inputHandler} />
-        <h2>{input}</h2>
+        {toggle == true && <h2>{input}</h2>}
       </div>
     </>
   );
