@@ -2,6 +2,7 @@ import User from "./components/User";
 import "./styles/style.css";
 import styles from "./styles/style.module.css";
 const App = () => {
+  const age = 0;
   const names = ["saadoun", "maajoun"];
   const users = [
     { name: "gol", age: 20 },
@@ -26,6 +27,10 @@ const App = () => {
             </h1>
           );
         })}
+        <h1>{age}</h1>
+        <button type="button">Increse</button>
+        <button type="button">Decrese</button>
+        <button type="button">reset</button>
       </div>
     </>
   );
