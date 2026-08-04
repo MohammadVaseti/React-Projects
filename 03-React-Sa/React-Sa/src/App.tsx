@@ -1,13 +1,26 @@
+import { useState } from "react";
 import User from "./components/User";
 import "./styles/style.css";
 import styles from "./styles/style.module.css";
 const App = () => {
-  const age = 0;
+  const [age, setAge] = useState(0);
   const names = ["saadoun", "maajoun"];
   const users = [
     { name: "gol", age: 20 },
     { name: "shab", age: 32 },
   ];
+
+  function incHandler() {
+    setAge(age + 1);
+  }
+
+  const decHandler = () => {
+    setAge(age - 1);
+  };
+
+  const resetHandler = () => {
+    setAge((age = 0));
+  };
 
   return (
     <>
@@ -28,9 +41,15 @@ const App = () => {
           );
         })}
         <h1>{age}</h1>
-        <button type="button">Increse</button>
-        <button type="button">Decrese</button>
-        <button type="button">reset</button>
+        <button type="button" onClick={incHandler}>
+          Increse
+        </button>
+        <button type="button" onClick={decHandler}>
+          Decrese
+        </button>
+        <button type="button" onClick={resetHandler}>
+          reset
+        </button>
       </div>
     </>
   );
