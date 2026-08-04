@@ -19,7 +19,7 @@ const App = () => {
   };
 
   const resetHandler = () => {
-    setAge((age = 0));
+    setAge(0);
   };
 
   return (
@@ -42,10 +42,10 @@ const App = () => {
         })}
         <h1>{age}</h1>
         <button type="button" onClick={incHandler}>
-          Increse
+          Increase
         </button>
         <button type="button" onClick={decHandler}>
-          Decrese
+          Decrease
         </button>
         <button type="button" onClick={resetHandler}>
           reset
