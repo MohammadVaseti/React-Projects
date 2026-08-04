@@ -27,6 +27,8 @@ const App = () => {
     setInput(event.target.value);
   };
 
+  const toggle = () => {};
+
   return (
     <>
       <div>
@@ -54,6 +56,9 @@ const App = () => {
         </button>
         <button type="button" onClick={resetHandler}>
           reset
+        </button>
+        <button type="button" onClick={toggle}>
+          Show/Hide
         </button>
 
         <input type="text" onChange={inputHandler} />
