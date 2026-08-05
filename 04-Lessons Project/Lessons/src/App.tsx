@@ -1,4 +1,7 @@
+import { useState } from "react";
 import "./App.css";
+
+const [courseList, setCourseList] = useState();
 
 function App() {
   return (
