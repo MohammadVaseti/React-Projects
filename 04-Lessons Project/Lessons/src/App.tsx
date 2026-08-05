@@ -10,9 +10,9 @@ function App() {
     setNewCourse(event.target.value);
   };
 
-  setCourseList(...courseList, newCourse);
-
-  const handlerButton = () => {};
+  const handlerButton = () => {
+    setCourseList([...courseList, newCourse]);
+  };
   return (
     <>
       <div className="add-course">
@@ -21,7 +21,11 @@ function App() {
           Add Course
         </button>
       </div>
-      <div className="list"></div>
+      <div className="list">
+        {courseList.map((course, i) => {
+          return <h1>{course}</h1>;
+        })}
+      </div>
     </>
   );
 }
