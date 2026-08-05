@@ -5,7 +5,9 @@ const [courseList, setCourseList] = useState([]);
 const [newCourse, setNewCourse] = useState("");
 
 function App() {
-  const handleInput = () => {};
+  const handleInput = (event) => {
+    setNewCourse(event.target.value);
+  };
 
   return (
     <>
