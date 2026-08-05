@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 
-const [courseList, setCourseList] = useState([]);
-const [newCourse, setNewCourse] = useState("");
-
 function App() {
+  const [courseList, setCourseList] = useState([]);
+  const [newCourse, setNewCourse] = useState("");
+
   const handleInput = (event) => {
     setNewCourse(event.target.value);
   };
@@ -15,6 +15,7 @@ function App() {
         <input type="text" onChange={handleInput}></input>
         <button type="button">Add Course</button>
       </div>
+      <h1>{newCourse}</h1>
       <div className="list"></div>
     </>
   );
