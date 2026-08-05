@@ -15,7 +15,6 @@ function App() {
         <input type="text" onChange={handleInput}></input>
         <button type="button">Add Course</button>
       </div>
-      <h1>{newCourse}</h1>
       <div className="list"></div>
     </>
   );
