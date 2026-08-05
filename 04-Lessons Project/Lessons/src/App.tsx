@@ -3,7 +3,11 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>hello</h1>
+      <div className="add-course">
+        <input type="text"></input>
+        <button type="button">Add Course</button>
+      </div>
+      <div className="list"></div>
     </>
   );
 }
