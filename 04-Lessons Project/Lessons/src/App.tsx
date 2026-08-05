@@ -10,6 +10,8 @@ function App() {
     setNewCourse(event.target.value);
   };
 
+  setCourseList(...courseList, newCourse);
+
   const handlerButton = () => {};
   return (
     <>
