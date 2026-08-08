@@ -13,6 +13,9 @@ function App() {
   const handlerButton = () => {
     setCourseList([...courseList, newCourse]);
   };
+
+  const deleteHandler = () => {};
+
   return (
     <>
       <div className="add-course">
@@ -24,8 +27,9 @@ function App() {
       <div className="list">
         {courseList.map((course, i) => {
           return (
-            <div>
-              <h1>{course}</h1>;<button>Remove</button>
+            <div style={{ display: "flex" }}>
+              <h1>{course}</h1>
+              <button onClick={deleteHandler}>Remove</button>
             </div>
           );
         })}
