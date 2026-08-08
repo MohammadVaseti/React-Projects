@@ -37,9 +37,11 @@ function App() {
       <div className="list">
         {courseList.map((course, i) => {
           return (
-            <div style={{ display: "flex" }}>
-              <h1>{course.courseName}</h1>
-              <button onClick={() => deleteHandler(course.id)}>Remove</button>
+            <div key={`div_${i}`} style={{ display: "flex" }}>
+              <h1 key={`h1_${i}`}>{course.courseName}</h1>
+              <button key={`btn_${i}`} onClick={() => deleteHandler(course.id)}>
+                Remove
+              </button>
             </div>
           );
         })}
