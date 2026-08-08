@@ -10,6 +10,10 @@ function App() {
     setNewCourse(event.target.value);
   };
 
+  const course = {
+    courseName: newCourse,
+    id: courseList.length === 0 ? 1 : courseList[courseList.length - 1].id + 1,
+  };
   const handlerButton = () => {
     setCourseList([...courseList, newCourse]);
   };
