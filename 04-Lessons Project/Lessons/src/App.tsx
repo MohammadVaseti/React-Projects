@@ -18,9 +18,9 @@ function App() {
     setCourseList([...courseList, course]);
   };
 
-  const deleteHandler = (courseName) => {
+  const deleteHandler = (courseId) => {
     const newCourseList = courseList.filter((course) => {
-      if (course === courseName) return false;
+      if (courseId === course.id) return false;
       else return true;
     });
     setCourseList(newCourseList);
@@ -39,7 +39,7 @@ function App() {
           return (
             <div style={{ display: "flex" }}>
               <h1>{course.courseName}</h1>
-              <button onClick={() => deleteHandler(course)}>Remove</button>
+              <button onClick={() => deleteHandler(course.id)}>Remove</button>
             </div>
           );
         })}
