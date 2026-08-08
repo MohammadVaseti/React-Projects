@@ -14,7 +14,13 @@ function App() {
     setCourseList([...courseList, newCourse]);
   };
 
-  const deleteHandler = () => {};
+  const deleteHandler = (courseName) => {
+    const newCourseList = courseList.filter((course) => {
+      if (course === courseName) return false;
+      else return true;
+    });
+    setCourseList(newCourseList);
+  };
 
   return (
     <>
@@ -29,7 +35,7 @@ function App() {
           return (
             <div style={{ display: "flex" }}>
               <h1>{course}</h1>
-              <button onClick={deleteHandler}>Remove</button>
+              <button onClick={() => deleteHandler(course)}>Remove</button>
             </div>
           );
         })}
