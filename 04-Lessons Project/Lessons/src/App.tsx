@@ -15,7 +15,7 @@ function App() {
     id: courseList.length === 0 ? 1 : courseList[courseList.length - 1].id + 1,
   };
   const handlerButton = () => {
-    setCourseList([...courseList, newCourse]);
+    setCourseList([...courseList, course]);
   };
 
   const deleteHandler = (courseName) => {
@@ -38,7 +38,7 @@ function App() {
         {courseList.map((course, i) => {
           return (
             <div style={{ display: "flex" }}>
-              <h1>{course}</h1>
+              <h1>{course.courseName}</h1>
               <button onClick={() => deleteHandler(course)}>Remove</button>
             </div>
           );
