@@ -23,7 +23,11 @@ function App() {
       </div>
       <div className="list">
         {courseList.map((course, i) => {
-          return <h1>{course}</h1>;
+          return (
+            <div>
+              <h1>{course}</h1>;<button>Remove</button>
+            </div>
+          );
         })}
       </div>
     </>
