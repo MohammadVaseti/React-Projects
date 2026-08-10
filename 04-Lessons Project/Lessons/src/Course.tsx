@@ -1,6 +1,11 @@
 const Course = (props) => {
   return (
-    <div style={{ display: "flex" }}>
+    <div
+      style={{
+        display: "flex",
+        backgroundColor: props.course.isCompleted ? "green" : "white",
+      }}
+    >
       <h1>{props.course.courseName}</h1>
       <button onClick={() => props.deleteHandler(props.course.id)}>
         Remove
