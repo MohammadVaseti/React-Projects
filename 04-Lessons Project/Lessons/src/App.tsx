@@ -30,7 +30,8 @@ function App() {
 
   const compeleteCourse = (courseId) => {
     const newCourseList = courseList.map((course, i) => {
-      if (courseId === course.id) return { ...course, isCompleted: true };
+      if (courseId === course.id)
+        return { ...course, isCompleted: !course.isCompleted };
       else return course;
     });
     setCourseList(newCourseList);
