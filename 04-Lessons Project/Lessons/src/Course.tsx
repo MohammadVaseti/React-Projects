@@ -1,8 +1,8 @@
-const Course = () => {
+const Course = (props) => {
   return (
-    <div key={`div_${i}`} style={{ display: "flex" }}>
-      <h1 key={`h1_${i}`}>{course.courseName}</h1>
-      <button key={`btn_${i}`} onClick={() => deleteHandler(course.id)}>
+    <div style={{ display: "flex" }}>
+      <h1 >{props.course.courseName}</h1>
+      <button } onClick={() => props.deleteHandler(props.course.id)}>
         Remove
       </button>
     </div>

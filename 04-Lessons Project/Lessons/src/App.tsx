@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Course from "./Course";
 
 function App() {
   const [courseList, setCourseList] = useState([]);
@@ -36,9 +37,7 @@ function App() {
       </div>
       <div className="list">
         {courseList.map((course, i) => {
-          return (
-          
-          );
+          return <Course course={course} deleteHandler={} />;
         })}
       </div>
     </>
