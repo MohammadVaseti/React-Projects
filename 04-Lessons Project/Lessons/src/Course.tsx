@@ -5,7 +5,13 @@ const Course = (props) => {
       <button onClick={() => props.deleteHandler(props.course.id)}>
         Remove
       </button>
-      <button onClick={}>Compeleted</button>
+      <button
+        onClick={() => {
+          props.compeleteCourse(props.course.id);
+        }}
+      >
+        Compeleted
+      </button>
     </div>
   );
 };

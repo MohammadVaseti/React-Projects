@@ -14,7 +14,7 @@ function App() {
   const course = {
     courseName: newCourse,
     id: courseList.length === 0 ? 1 : courseList[courseList.length - 1].id + 1,
-    isCompleted : false
+    isCompleted: false,
   };
   const handlerButton = () => {
     setCourseList([...courseList, course]);
@@ -29,7 +29,11 @@ function App() {
   };
 
   const compeleteCourse = () => {
-    const newCourseList =
+    const newCourseList = courseList.map((c, i) => {
+      if (course.id === courseId) return { ...course, isCompleted: true };
+      else return course;
+    });
+    setCourseList(newCourseList);
   };
 
   return (
@@ -43,7 +47,12 @@ function App() {
       <div className="list">
         {courseList.map((course, i) => {
           return (
-            <Course key={i} course={course} deleteHandler={deleteHandler} />
+            <Course
+              key={i}
+              course={course}
+              deleteHandler={deleteHandler}
+              compeleteCourse={compeleteCourse}
+            />
           );
         })}
       </div>
