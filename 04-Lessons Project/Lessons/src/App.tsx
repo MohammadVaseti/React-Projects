@@ -37,7 +37,9 @@ function App() {
       </div>
       <div className="list">
         {courseList.map((course, i) => {
-          return <Course course={course} deleteHandler={} />;
+          return (
+            <Course key={i} course={course} deleteHandler={deleteHandler} />
+          );
         })}
       </div>
     </>
