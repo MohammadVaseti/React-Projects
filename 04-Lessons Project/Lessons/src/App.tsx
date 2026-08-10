@@ -14,6 +14,7 @@ function App() {
   const course = {
     courseName: newCourse,
     id: courseList.length === 0 ? 1 : courseList[courseList.length - 1].id + 1,
+    isCompleted : false
   };
   const handlerButton = () => {
     setCourseList([...courseList, course]);
@@ -25,6 +26,10 @@ function App() {
       else return true;
     });
     setCourseList(newCourseList);
+  };
+
+  const compeleteCourse = () => {
+    const newCourseList =
   };
 
   return (
