@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import User from "./components/User";
 import "./styles/style.css";
 import styles from "./styles/style.module.css";
@@ -67,46 +67,6 @@ const App = () => {
         <input type="text" onChange={inputHandler} />
         {toggle == true && <h2>{input}</h2>}
       </div>
-
-const text = () =>{
-
-useEffect(()=>{
-
-},[])
-
-
-
-
-
-  return (
-
-    <div>
-
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-  )
-}
-
-
-
-
-
-
-
-
     </>
   );
 };
