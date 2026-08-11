@@ -67,6 +67,46 @@ const App = () => {
         <input type="text" onChange={inputHandler} />
         {toggle == true && <h2>{input}</h2>}
       </div>
+
+const text = () =>{
+
+useEffect(()=>{
+
+},[])
+
+
+
+
+
+  return (
+
+    <div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+  )
+}
+
+
+
+
+
+
+
+
     </>
   );
 };
