@@ -1,5 +1,10 @@
+import { useEffect, useState } from "react";
+
 const text = () => {
-  return (  );
-}
- 
+  const [text, setText] = useState("");
+
+  useEffect(() => {}, []);
+  return <></>;
+};
+
 export default text;
